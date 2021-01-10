@@ -850,7 +850,11 @@ hgroup h1 {
     background-color: #292929;
 }
 .navbar li {
+    display: none;
+}
 
+.navbar a:after {
+    transition: none;
     display: none;
 }
 
