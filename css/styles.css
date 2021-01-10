@@ -972,6 +972,11 @@ hgroup h1 {
         box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
     }
 
+    .index-hero,
+    .about-hero {
+        background-position-x: 20%;
+    }
+
     /* Grid Styling */
     .index-hero .grid,
     .index-campaign .grid,
