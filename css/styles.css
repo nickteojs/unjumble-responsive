@@ -974,7 +974,7 @@ hgroup h1 {
 
     .index-hero,
     .about-hero {
-        background-position-x: 20%;
+        background-attachment: scroll;
     }
 
     /* Grid Styling */
