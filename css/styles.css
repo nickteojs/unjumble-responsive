@@ -1001,6 +1001,10 @@ hgroup h1 {
     }
 
     /* Index Page */
+    .index-hero .section-title {
+        margin-top: 80px;
+    }
+
     .index-stats, .index-campaign, .index-app, .about-goals{
         height: auto;
         padding: 100px 0;
@@ -1009,6 +1013,10 @@ hgroup h1 {
     .index-stats .card:hover,
     .about-goals .card:hover {
         transform: none;
+    }
+
+    .index-campaign .campaigncopy {
+        margin-left: 0px;
     }
 
     .video {
