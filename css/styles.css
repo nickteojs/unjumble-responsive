@@ -969,7 +969,7 @@ hgroup h1 {
     .index-hero,
     .about-hero,
     .app-hero {
-        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
+        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
     }
 
     .index-hero,
@@ -978,7 +978,7 @@ hgroup h1 {
     }
 
     /* Grid Styling */
-    .index-hero .grid,
+    .index-hero .grid,  
     .index-campaign .grid,
     .index-stats .grid,
     .index-app .grid,
