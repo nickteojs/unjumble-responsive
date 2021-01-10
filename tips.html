@@ -47,7 +47,7 @@
     <!-- Hamburger Toggler -->
     <script>
         $(document).ready(function () {
-        $(".hamburger").click(function () {
+        $(".x-block").click(function () {
         $(".overlay-menu").fadeToggle(500);
         $(".top-menu").toggleClass("top-animate");
         $(".mid-menu").toggleClass("mid-animate");
@@ -69,13 +69,15 @@
                     <li><a href="tips.html">Tips</a></li>
                     <li><a href="app.html">Our App</a></li>
 
-                    <a href="javascript:void(0)" class="icon">
-                        <div class="hamburger">
-                            <div class="menui top-menu"></div>
-                            <div class="menui mid-menu"></div>
-                            <div class="menui bottom-menu"></div>
-                        </div>
-                    </a>
+                    <div class="x-block">
+                        <a href="javascript:void(0)" class="icon">
+                            <div class="hamburger">
+                                <div class="menui top-menu"></div>
+                                <div class="menui mid-menu"></div>
+                                <div class="menui bottom-menu"></div>
+                            </div>
+                        </a>
+                    </div>
                 </ul>
             </nav>
     </div>

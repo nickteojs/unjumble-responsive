@@ -974,9 +974,10 @@ hgroup h1 {
 
 /* -- MOBILE -- */
 @media (max-width: 500px) {
+
     /* Navbar Styling */
     .overlay-menu li:first-child {
-        margin-top: 80%;
+        margin-top: 70%;
     }
     
     /* Hero BG Styling */
