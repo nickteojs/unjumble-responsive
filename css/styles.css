@@ -885,6 +885,11 @@ hgroup h1 {
     text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.x-block {
+    width: 60px;
+    height: 100px;
+}
+
 .hamburger {
     width: auto;
     height: 50px;
@@ -965,11 +970,16 @@ hgroup h1 {
 
 /* -- MOBILE -- */
 @media (max-width: 500px) {
+    /* Navbar Styling */
+    .overlay-menu li:first-child {
+        margin-top: 80%;
+    }
+    
     /* Hero BG Styling */
     .index-hero,
     .about-hero,
     .app-hero {
-        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
     }
 
     .index-hero,
@@ -993,8 +1003,7 @@ hgroup h1 {
     .tips-others .grid,
     .app-hero .grid,
     .app-desc1 .grid,
-    .app-desc2 .grid,
-    .app-desc3 .grid {
+    .app-desc2 .grid {
         justify-content: center;
         text-align: center;
         grid-template-columns: 0.95fr;
@@ -1002,7 +1011,7 @@ hgroup h1 {
 
     /* Index Page */
     .index-hero .section-title {
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .index-stats, .index-campaign, .index-app, .about-goals{
@@ -1149,6 +1158,10 @@ hgroup h1 {
         background-position-x: 20%;
     }
 
+    .app-desc3 .grid {
+        grid-template-columns: 0.55fr;
+    }
+
     .app-desc1,
     .app-desc2,
     .app-desc3 {
@@ -1169,9 +1182,14 @@ hgroup h1 {
     }
 
     .app-desc1 .section-title,
-    .app-desc1 .section-paragraph,
-    .app-desc3 .section-paragraph {
+    .app-desc1 .section-paragraph {
         max-width: 100%;
+    }
+
+    .app-desc3 .section-paragraph {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .app-desc1 .mb-5,
@@ -1193,7 +1211,7 @@ hgroup h1 {
     }
     
     .app-desc3 img {
-        width: 400px;
+        width: 350px;
         margin-bottom: 50px;
     }
 }
