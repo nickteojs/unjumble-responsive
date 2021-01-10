@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel='shortcut icon' href="favicon.ico" type='image/x-icon'/ >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/wow.js"></script>            
+    <title>Unjumbled</title>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Navbar bg change on scroll -->
+    <script>
+        window.addEventListener('scroll', () => {
+        const scrolls = window.scrollY;
+        const nav = document.querySelector('.navbar');
+        if(scrolls>200 && window.innerWidth > 768) {
+            nav.classList.add("scrolled");
+        }
+        else {
+            nav.classList.remove("scrolled")
+        }
+    })
+    </script>
+
+    <!-- Show back to top button -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolls = window.scrollY;
+            const bttBtn = document.querySelector('.back-to-top');
+            if(scrolls>500) {
+                bttBtn.style.opacity = "1";
+            }
+            else {
+                bttBtn.style.opacity = "0";
+            }
+        })
+    </script>
+
+    <!-- Hamburger Toggler -->
+    <script>
+        $(document).ready(function () {
+        $(".hamburger").click(function () {
+        $(".overlay-menu").fadeToggle(500);
+        $(".top-menu").toggleClass("top-animate");
+        $(".mid-menu").toggleClass("mid-animate");
+        $(".bottom-menu").toggleClass("bottom-animate");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <!-- Navbar -->
+    <div class="navbar">
+            <img class="logo" src="./images/Logo.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+
+                    <a href="javascript:void(0)" class="icon">
+                        <div class="hamburger">
+                            <div class="menui top-menu"></div>
+                            <div class="menui mid-menu"></div>
+                            <div class="menui bottom-menu"></div>
+                        </div>
+                    </a>
+                </ul>
+            </nav>
+    </div>
+
+    <ul class="overlay-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dyslexia.html">Dyslexia</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="app.html">Our App</a></li>
+    </ul>
+
+    <section class="tips-hero">
+        <div class="container grid">
+            <div class="wow fadeInDown">
+                <h1 class="section-title highlight">Learn better, be better.</h1>
+                <p class="section-paragraph">Little tips for you and I that can make
+                    a big difference to the lives of dyslexics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-self py-5 my-5">
+        <div class="py-5">
+            <h1 class="section-title highlight">Tips</h1>
+            <p class="section-paragraph">Here are some tips to help you better cope with Dyslexia.</p>
+            <hr>
+        </div>
+        <div class="container grid">
+            <div class="text-left tip-1">
+                <img src="./images/tips/tipsdailyreading.png" alt="">  
+            </div>
+            <div class="text-right tip-2">
+                <h1 class="secondary-title">Daily reading is essential.</h1>
+                <p class="section-paragraph">Practice, practice, practice! Practice
+                    makes perfect and you can never do enough
+                    of it. Gradually, it will be easier and soon, words
+                    you see and read will be “unjumbled”!</p>
+            </div>
+            <div class="text-left tip-4">
+                <h1 class="secondary-title">Adopt a cursive handwriting.</h1>
+                <p class="section-paragraph">The flowing motion of cursive handwriting is
+                    very effective for connecting the eyes, brain and hand.
+                    This helps in learning and thinking which leads to less chances
+                    of jumbling the alphabets and words when reading.</p>
+            </div>
+            <div class="text-right tip-3">
+                <img src="./images/tips/tipscursive.png" alt="">
+            </div>
+            <div class="text-left tip-5">
+                <img src="./images/tips/tipsspeech.png" alt="">
+            </div>
+            <div class="text-right tip-6">
+                <h1 class="secondary-title">Use a text-to-speech application.</h1>
+                <p class="section-paragraph">A dyslexic may have difficulty reading but have
+                    no problem listening. Turn to a text-to-speech
+                    application if reading can be too hard! Many dyslexics
+                    find auditory learning more effective. One application
+                    you can download is our app Unjumbler.</p>
+            </div>
+            <div class="text-left tip-8">
+                <h1 class="secondary-title exercise-words">Exercise regularly.</h1>
+                <p class="section-paragraph">There is a strong correlation between core body
+                    strength, cardiovascular fitness and learning. Exercising will
+                    help strengthen muscles, keep you and your mind healthy and fit!
+                    It will also help strengthen your learning capability!</p>
+            </div>
+            <div class="text-right tip-7">
+                <img src="./images/tips/tipsexercise.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-others py-5 my-5">
+        <div class="py-5">
+            <h1 class="section-title highlight">Tips for friends and family.</h1>
+            <p class="section-paragraph">Here are some tips for how to help someone cope with Dyslexia.</p>
+            <hr>
+        </div>
+        <div class="container grid">
+            <div class="text-left">
+                <img src="./images/tips/tipsfriendsinform.png" alt="">  
+            </div>
+            <div class="text-right">
+                <h1 class="secondary-title">Be informed.</h1>
+                <p class="section-paragraph">Being informed is the first step to helping and coping
+                    with a friend or family member with dyslexia. Get to know
+                    about the learning disability and the help available.
+                    Though you may not understand how they feel,
+                    knowing about it is already a good starting point!</p>
+            </div>
+            <div class="text-left tip-10">
+                <h1 class="secondary-title">Read to them or with them.</h1>
+                <p class="section-paragraph">Read to them! Auditory learning may be more productive as
+                    they get to hear words pronounced properly. Another way is to read
+                    with them! Paired reading has been proven to be more effective.</p>
+            </div>
+            <div class="text-right tip-9">
+                <img src="./images/tips/tipsfriendsread.png" alt="">
+            </div>
+            <div class="text-left">
+                <img src="./images/tips/tipsfriendspatience.png" alt="">
+            </div>
+            <div class="text-right">
+                <h1 class="secondary-title">Be patient!</h1>
+                <p class="section-paragraph">Be patient and loving. Being dyslexic can be frustrating.
+                    Remember they need you. They may have been teased or looked
+                    down on. They may feel inadequate. They need your patience.</p>
+            </div>
+        </div>
+    </section>
+    <a href="#" class="back-to-top">↑</a>
+
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container grid grid-3">
+            <div class="footer-copy">
+                <h1>Unjumble</h1>
+                <p>Copyright &copy; Nick Teo 2021.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-1x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-1x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-1x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-1x"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,1186 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap');
+
+/* Global Properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color:  #32ACD9;
+    --dark-color: #292929;
+    --dark-color2: #474747;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Hind', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    /* Keeps them within their container, so it won't bust out */
+    width: 100%;
+}
+
+.highlight {
+    color: var(--primary-color)
+}
+
+section {
+    height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    height: 70px;
+    background-color: transparent;
+    transition: 500ms;
+    z-index: 998;
+}
+
+.scrolled {
+    background-color: #292929 !important;
+    transition: background-color 500ms ease-in-out;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin: 10px 20px;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+    padding-top: 25px;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: var(--light-color);
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+}
+
+.navbar a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.overlay-menu li {
+    display: none;
+}
+
+/* Index Hero Section */
+.index-hero {
+    background-image:url(../images/index/homeheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-attachment: fixed;
+    color: var(--light-color);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.15);
+}
+
+.index-hero .btn {
+    font-size: 12px;
+}
+
+.index-hero .section-title {
+    margin-top: 20px;
+}
+
+/* Index Campaign Section */
+.index-campaign {
+    height: 100vh;
+    background-color: white;
+    text-align: left;
+}
+
+.index-campaign .grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    width: 1000px;
+    height: 540px;
+    margin: 0 auto;
+}
+
+/* Index Stats Section */
+.index-stats {
+    background-color: var(--primary-color);
+}
+
+.index-stats .grid {
+    grid-template-columns: repeat(3, 0.8fr);
+}
+
+.index-stats .card {
+    text-align: center;
+    transition: 200ms ease-out;
+}
+
+.index-stats .card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+.index-stats .card img {
+    width: 300px;
+}
+
+/* Index App Section */
+.index-app {
+    background-color: var(--dark-color2);
+    color: var(--light-color);
+    height: 700px;
+}
+
+.index-app .section-paragraph {
+    max-width: 475px;
+}
+
+.index-app .grid {
+    grid-template-columns: 1fr 0.8fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.index-app img {
+    width: 350px;
+    margin-top: 25%;
+}
+
+.index-app .btn {
+    font-size: 12px;
+}
+
+/* About Page */
+.about-hero {
+    background-image:url(../images/about/aboutheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-attachment: fixed;
+    color: var(--light-color);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+}
+
+.about-goals .grid {
+    grid-template-columns: repeat(3, 0.5fr);
+}
+
+.about-goals .card {
+    text-align: center;
+    transition: 200ms ease-out;
+}
+
+.about-goals .card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+.about-goals .card img {
+    width: 200px;
+}
+
+.about-team {
+    text-align: center;
+    background-color: var(--dark-color2);
+    color: var(--light-color);
+    height: 700px;
+}
+
+.about-team h1 {
+    color: var(--primary-color);
+}
+
+.about-team p {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-team .grid {
+    grid-template-rows: 0.5fr;
+    grid-template-columns: repeat(4, 0.3fr);
+}
+
+.about-team .grid .section-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-self: flex-end;
+}
+
+.about-team img {
+    width: 160px;
+}
+
+.about-contactform {
+    background-color: var(--dark-color2);
+    height: 700px;
+}
+
+.about-contactform .card {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.contactform {
+    width: 400px;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactform h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contactform input[type='text'],
+.contactform input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.contactform input:focus {
+    outline: none;
+}
+
+.contactform .btn {
+    margin-top: 20px;
+    border: none;
+    padding: 15px 30px;
+}
+
+.textarea {
+    width: 320px;
+    outline: none;
+    margin: 15px 0;
+    height: 32px;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #b4becb;
+    padding-left: 4px;
+}
+
+/* Dyslexia Section */
+.dyslexia-hero {
+    background-color: var(--dark-color2);
+    text-align: center;
+    color: var(--light-color);
+}
+
+.dyslexia-hero .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dyslexia-about {
+    background-image:url(../images/dyslexia/dyslexiaheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    color: var(--light-color);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+.dyslexia-symptoms {
+    text-align: center;
+    height: 650px;
+}
+
+.dyslexia-symptoms .grid {
+    grid-template-rows: 0.5fr 0.25fr;
+    grid-template-columns: repeat(3, 0.25fr);
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.dyslexia-symptoms .grid .symptom-heading {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: flex-end;
+}
+
+.dyslexia-symptoms img {
+    width: 275px;
+    height: 275px;
+}
+
+.dyslexia-myths {
+    text-align: center;
+    background-color: var(--dark-color2);
+    color: var(--light-color);
+}
+
+.dyslexia-myths h1 {
+    color: var(--primary-color);
+}
+
+.dyslexia-myths p {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dyslexia-myths img {
+    width: 200px;
+    height: 200px;
+}
+
+.dyslexia-myths .grid {
+    grid-template-rows: 0.5fr;
+    grid-template-columns: repeat(3, 0.4fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.dyslexia-myths .grid .section-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-self: flex-end;
+}
+
+/*JUMBLE */
+
+#jumble { 
+    margin: 0 auto;
+    width: 100%;
+    height: 220px;
+  }
+  
+hgroup h1 {
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0; 
+    position: absolute;
+    top: 50%;
+    width: 100%; 
+    height: 220px;
+    font-size: 65px;
+    color: #1a85ad; 
+    line-height: 34px;
+  }
+  
+  hgroup h1 span { 
+    position:relative; 
+  }
+  
+  .start {
+    z-index: 1; 
+  }
+  .line-break { 
+    height: 0px; 
+    overflow:hidden; 
+  }
+  
+  /*JUMBLE */
+
+/* Tips Section */
+.tips-hero {
+    background-image:url(../images/tips/tipheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    color: var(--light-color);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tips-hero .grid {
+    grid-template-columns: 0.4fr;
+}
+
+.tips-self {
+    height: auto;
+    text-align: center;
+}
+
+.tips-self hr {
+    width: 1050px;
+    margin: 10px auto;
+    margin-top: 50px;
+}
+
+.tips-self img {
+    width: 250px;
+    height: 250px;
+}
+
+.tips-self .grid {
+    justify-content: center;
+    grid-template-columns: repeat(2, 0.35fr);
+    grid-row-gap: 50px;
+}
+
+.tips-others {
+    height: auto;
+    text-align: center;
+}
+
+.tips-others hr {
+    width: 1050px;
+    margin: 10px auto;
+    margin-top: 50px;
+}
+
+.tips-others .grid {
+    justify-content: center;
+    grid-template-columns: repeat(2, 0.35fr);
+    grid-row-gap: 50px;
+}
+
+.tips-others img {
+    width: 250px;
+    height: 250px;
+}
+
+/* App Section */
+.app-hero {
+    background-image:url(../images/app/appheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    color: var(--light-color);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+}
+
+.app-desc1, 
+.app-desc2, 
+.app-desc3 {
+    height: 700px;
+}
+
+.app-desc1 .grid, 
+.app-desc2 .grid,
+.app-desc3 .grid {
+    grid-template-columns: 1fr 0.8fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.app-desc1 img, 
+.app-desc2 img {
+    width: 350px;
+    margin-top: 25%;
+}
+
+.app-desc1 .section-paragraph {
+    max-width: 75%;
+}
+
+.app-desc2 {
+    background-color: var(--dark-color2);
+    color: var(--light-color);
+}
+
+.app-desc3 {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.app-desc3 img {
+    width: 540px;
+    margin-top: 25%;
+}
+
+.app-desc3 .section-paragraph {
+    max-width: 70%;
+}
+
+.speechtotext {
+    margin-left: 100px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.footer .container {
+    max-width: 1100px;
+}
+
+.footer li {
+    margin: 3px 0;
+}
+
+.footer p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.footer a {
+    color: white;
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+}
+
+.footer a:visited {
+    color: white;
+}
+
+.footer .social a {
+    margin: 0 10px;
+    color: white;
+}
+
+.footer .social a:visited {
+    color: white;
+}
+
+/* Media Queries */
+
+/* -- LAPTOPS -- */
+@media(max-width: 1366px) {
+
+    /* Grid Styling */
+    .index-hero .section-title {
+        margin-top: 120px;
+    }
+
+    .index-campaign .grid {
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .index-campaign .campaigncopy {
+        margin-left: 30px;
+    }
+
+    .video {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+/* -- TABLETS -- */
+@media (max-width: 768px) {
+
+/* Grid Styling */
+.index-campaign .grid,
+.index-stats .grid,
+.index-app .grid,
+.about-goals .grid,
+.about-team .grid,
+.dyslexia-about .grid,
+.dyslexia-symptoms .grid,
+.dyslexia-myths .grid,
+.tips-hero .grid,
+.tips-self .grid,
+.tips-others .grid {
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 0.95fr;
+}
+
+.index-hero .grid,
+.about-hero .grid {
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 0.8fr;
+}
+
+/* Index Page */
+.index-hero,
+.about-hero,
+.app-hero {
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+}
+
+.index-stats, .index-campaign, .index-app, .about-goals{
+    height: auto;
+    padding: 100px 0;
+}
+
+.index-stats .card:hover,
+.about-goals .card:hover {
+    transform: none;
+}
+
+.video {
+    width: 600px;
+    height: 500px;
+}
+
+.index-app .order-1 {
+    order: 2;
+}
+
+.index-app .order-2 {
+    order: 1;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.index-app .section-paragraph {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-app img {
+    margin-top: 30px;
+}
+
+/* About Page */
+.about-team .grid .section-title {
+    grid-column-start: auto;
+    grid-column-end: auto;
+}
+
+.about-team {
+    height: auto;
+    padding-top: 100px;
+}
+
+.about-team .grid {
+    gap: 60px;
+}
+
+.about-team .section-title {
+    margin-bottom: 20px;
+}
+
+/* Dyslexia Page */
+.dyslexia-about {
+    background-position-x: 10%;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
+
+.dyslexia-symptoms .grid .symptom-heading,
+    .dyslexia-myths .grid .section-title {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
+    .dyslexia-symptoms {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .dyslexia-myths {
+        height: auto;
+        padding: 100px 0;
+    }
+
+/* Tips Page */
+
+.tips-hero {
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    background-position-x: 20%;
+}
+
+.tips-self .grid {
+    gap: 20px;
+}
+
+.tips-self .text-left,
+.tips-self .text-right,
+.tips-others .text-left,
+.tips-others .text-right {
+    text-align: center!important;
+}
+
+.tips-self hr,
+.tips-others hr {
+    width: 90%;
+}
+
+.tips-others .section-title {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.tip-1 {
+    order: 1;
+}
+.tip-2 {
+    order: 2;
+}
+.tip-3 {
+    order: 3;
+}
+.tip-4 {
+    order: 4;
+}
+.tip-5 {
+    order: 5;
+}
+.tip-6 {
+    order: 6;
+}
+.tip-7 {
+    order: 7;
+}
+.tip-8 {
+    order: 8;
+}
+.tip-9 {
+    order: 9;
+}
+.tip-10 {
+    order: 10;
+}
+
+/* App Page */
+.app-hero .grid,
+.app-desc1 .grid,
+.app-desc2 .grid,
+.app-desc3 .grid {
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 0.75fr;
+}
+
+.app-hero {
+    background-position-x: 10%;
+}
+
+.app-desc1,
+.app-desc2,
+.app-desc3 {
+    height: auto;
+}
+
+.app-desc1 img,
+.app-desc2 img,
+.app-desc3 img {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.app-desc1 .section-title,
+.app-desc2 .section-title,
+.app-desc3 .section-title {
+    padding-top: 100px;
+}
+
+.app-desc1 .section-title,
+.app-desc1 .section-paragraph,
+.app-desc3 .section-paragraph {
+    max-width: 100%;
+}
+
+.app-desc1 .mb-5,
+.app-desc2 .mb-5,
+.app-desc3 .mb-5 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.app-desc2 .order-1 {
+    order: 2;
+}
+.app-desc2 .order-2 {
+    order: 1;
+}
+
+.app-desc2 .speechtotext {
+    margin-left: 0;
+}
+
+.app-desc3 img {
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #292929;
+}
+.navbar li {
+
+    display: none;
+}
+
+/* Responsive Navbar Menu */
+.overlay-menu {
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    position: fixed;
+    display: none;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.overlay-menu li {
+    margin: 20px 0;
+    display: block;
+}
+
+.overlay-menu li:first-child {
+    margin-top: 50%;
+}
+
+.overlay-menu li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+    width: auto;
+    height: 50px;
+    float: left;
+    background-color: black;
+    z-index: 999;
+}    
+
+.menui {
+    background: #fff;
+    transition: 0.6s ease;
+    transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 999;
+}
+
+.icon {
+    z-index: 999;
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 100%;
+    margin-left: 0px;
+    top: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.top-animate {
+    background: #fff !important;
+    top: 13px !important;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+  
+.mid-animate { 
+    opacity: 0; 
+}
+  
+.bottom-animate {
+    background: #fff !important;
+    top: 13px !important;
+    transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    -ms-transform: rotate(-225deg);
+}
+  
+.top-menu {
+    top: 5px;
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #fffef7;
+}
+  
+.mid-menu {
+    top: 13px;
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #fffef7;
+}
+  
+.bottom-menu {
+    top: 21px;
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #fffef7;
+  }
+}
+
+/* -- MOBILE -- */
+@media (max-width: 500px) {
+    /* Hero BG Styling */
+    .index-hero,
+    .about-hero,
+    .app-hero {
+        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+    }
+
+    /* Grid Styling */
+    .index-hero .grid,
+    .index-campaign .grid,
+    .index-stats .grid,
+    .index-app .grid,
+    .about-hero .grid,
+    .about-goals .grid,
+    .about-team .grid,
+    .dyslexia-about .grid,
+    .dyslexia-symptoms .grid,
+    .dyslexia-myths .grid,
+    .tips-hero .grid,
+    .tips-self .grid,
+    .tips-others .grid,
+    .app-hero .grid,
+    .app-desc1 .grid,
+    .app-desc2 .grid,
+    .app-desc3 .grid {
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: 0.95fr;
+    }
+
+    /* Index Page */
+    .index-stats, .index-campaign, .index-app, .about-goals{
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .index-stats .card:hover,
+    .about-goals .card:hover {
+        transform: none;
+    }
+
+    .video {
+        width: auto;
+        height: auto;
+    }
+
+    .index-app .order-1 {
+        order: 2;
+    }
+
+    .index-app .order-2 {
+        order: 1;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    /* About Page  */
+    .about-team .grid .section-title {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
+    .about-team {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .about-team .grid {
+        gap: 60px;
+    }
+
+    .about-team .section-title {
+        margin-bottom: 20px;
+    }
+
+    .contactform {
+        width: 350px;
+        padding: 40px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .textarea {
+        width: 270px;
+    }
+
+    /* Dyslexia Page */
+    .dyslexia-about {
+        background-position-x: 20%;
+        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.85);
+    }
+
+    .dyslexia-symptoms .grid .symptom-heading,
+    .dyslexia-myths .grid .section-title {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
+    .dyslexia-symptoms {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .dyslexia-myths {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    /* Tips Page */
+    .tips-hero {
+        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+        background-position-x: 20%;
+    }
+    
+    .tips-self .grid {
+        gap: 20px;
+    }
+
+    .tips-self .text-left,
+    .tips-self .text-right,
+    .tips-others .text-left,
+    .tips-others .text-right {
+        text-align: center!important;
+    }
+
+    .tips-self hr,
+    .tips-others hr {
+        width: 90%;
+    }
+
+    .tips-others .section-title {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .tip-1 {
+        order: 1;
+    }
+    .tip-2 {
+        order: 2;
+    }
+    .tip-3 {
+        order: 3;
+    }
+    .tip-4 {
+        order: 4;
+    }
+    .tip-5 {
+        order: 5;
+    }
+    .tip-6 {
+        order: 6;
+    }
+    .tip-7 {
+        order: 7;
+    }
+    .tip-8 {
+        order: 8;
+    }
+    .tip-9 {
+        order: 9;
+    }
+    .tip-10 {
+        order: 10;
+    }
+    
+    /* App Page */
+    .app-hero {
+        background-position-x: 20%;
+    }
+
+    .app-desc1,
+    .app-desc2,
+    .app-desc3 {
+        height: auto;
+    }
+
+    .app-desc1 img,
+    .app-desc2 img,
+    .app-desc3 img {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .app-desc1 .section-title,
+    .app-desc2 .section-title,
+    .app-desc3 .section-title {
+        padding-top: 100px;
+    }
+
+    .app-desc1 .section-title,
+    .app-desc1 .section-paragraph,
+    .app-desc3 .section-paragraph {
+        max-width: 100%;
+    }
+
+    .app-desc1 .mb-5,
+    .app-desc2 .mb-5,
+    .app-desc3 .mb-5 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .app-desc2 .order-1 {
+        order: 2;
+    }
+    .app-desc2 .order-2 {
+        order: 1;
+    }
+
+    .app-desc2 .speechtotext {
+        margin-left: 0;
+    }
+    
+    .app-desc3 img {
+        width: 400px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel='shortcut icon' href="favicon.ico" type='image/x-icon'/ >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/wow.js"></script>   
+    <title>Unjumbled</title>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Navbar bg change on scroll -->
+    <script>
+        window.addEventListener('scroll', () => {
+        const scrolls = window.scrollY;
+        const nav = document.querySelector('.navbar');
+        if(scrolls>200 && window.innerWidth > 768) {
+            nav.classList.add("scrolled");
+        }
+        else {
+            nav.classList.remove("scrolled")
+        }
+    })
+    </script>
+
+    <!-- Show back to top button -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolls = window.scrollY;
+            const bttBtn = document.querySelector('.back-to-top');
+            if(scrolls>500) {
+                bttBtn.style.opacity = "1";
+            }
+            else {
+                bttBtn.style.opacity = "0";
+            }
+        })
+    </script>
+
+    <!-- Hamburger Toggler -->
+    <script>
+        $(document).ready(function () {
+        $(".hamburger").click(function () {
+        $(".overlay-menu").fadeToggle(500);
+        $(".top-menu").toggleClass("top-animate");
+        $(".mid-menu").toggleClass("mid-animate");
+        $(".bottom-menu").toggleClass("bottom-animate");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <!-- Navbar -->
+    <div class="navbar">
+            <img class="logo" src="./images/Logo.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+
+                    <a href="javascript:void(0)" class="icon">
+                        <div class="hamburger">
+                            <div class="menui top-menu"></div>
+                            <div class="menui mid-menu"></div>
+                            <div class="menui bottom-menu"></div>
+                        </div>
+                    </a>
+                </ul>
+            </nav>
+    </div>
+
+    <ul class="overlay-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dyslexia.html">Dyslexia</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="app.html">Our App</a></li>
+    </ul>
+
+    <section class="app-hero">
+        <div class="container grid">
+            <div class="wow fadeInDown">
+                <h1 class="section-title highlight">With eyes to see and ears to hear.</h1>
+                <p class="section-paragraph">Converting words to sounds for all to hear.
+                    Introducing <span class="highlight">Unjumbler</span>, the only application that
+                    translates your complications to ease.</p>
+                <img class="appstore" src="./images/assets/black_app_store.svg">
+                <img class="androidstore" src="./images/assets/google-play-badge.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="app-desc1">
+        <div class="container grid">
+            <div class="mb-5">
+                <h1 class="section-title highlight">Text-to-speech</h1>
+                <p class="section-paragraph">Difficulty reading? Too many words? Fret not! Take a snap of a
+                    printed text and upload it onto Unjumbler. The app has a function
+                    where it converts text to speech with the best sounding voices.</p>
+                <p class="section-paragraph">By listening to text rather than reading, one is able to better
+                    comprehend the information! This application is efficient,
+                    fast, and easy to use.</p>
+            </div>
+            <div class="text-center wow fadeInUp" data-wow-offset="20">
+                <img src="./images/app/6sconvertHDblack.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="app-desc2">
+        <div class="container grid">
+            <div class="speechtotext order-1 wow fadeInUp" data-wow-offset="20">
+                <img src="./images/app/6srecordHDblack.png" alt="">
+            </div>
+            <div class="mb-5 pb-5 order-2">
+                <h1 class="section-title highlight">Speech-to-text</h1>
+                <p class="section-paragraph">Think better out loud? Simply tap on the “Record” button to start!
+                    Unjumbler handles the rest. The app will transcribe the recording and
+                    formulate it into proper sentences with appropriate punctuations.</p>
+                <p class="section-paragraph">This comes in very handy if you can't remember how to spell a
+                    word. Your audio recordings and formulated sentences can
+                    also be saved for easy referencing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-desc3">
+        <div class="container grid">
+            <div class="mb-5 pb-5  ">
+                <h1 class="section-title">All for you, all with you</h1>
+                <p class="section-paragraph">Unjumbler is an app that serves all for you and
+                    with you. All pictures and recordings uploaded will
+                    be saved in the app. Unjumbler saves the hassle of
+                    re-recording and re-uploading. It has your back!</p>
+            </div>
+            <div class="text-center wow fadeInUp" data-wow-offset="20">
+                <img src="./images/app/2phonesave.png" alt="">
+            </div>
+        </div>
+    </section>
+    <a href="#" class="back-to-top">↑</a>
+
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container grid grid-3">
+            <div class="footer-copy">
+                <h1>Unjumble</h1>
+                <p>Copyright &copy; Nick Teo 2021.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-1x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-1x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-1x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-1x"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel='shortcut icon' href="favicon.ico" type='image/x-icon'/ >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <title>Unjumbled</title>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Navbar bg change on scroll -->
+    <script>
+        window.addEventListener('scroll', () => {
+        const scrolls = window.scrollY;
+        const nav = document.querySelector('.navbar');
+        if(scrolls>200 && window.innerWidth > 768) {
+            nav.classList.add("scrolled");
+        }
+        else {
+            nav.classList.remove("scrolled")
+        }
+    })
+    </script>
+
+    <!-- Show back to top button -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrolls = window.scrollY;
+            const bttBtn = document.querySelector('.back-to-top');
+            if(scrolls>500) {
+                bttBtn.style.opacity = "1";
+            }
+            else {
+                bttBtn.style.opacity = "0";
+            }
+        })
+    </script>
+
+    <!-- Hamburger Toggler -->
+    <script>
+        $(document).ready(function () {
+        $(".hamburger").click(function () {
+        $(".overlay-menu").fadeToggle(500);
+        $(".top-menu").toggleClass("top-animate");
+        $(".mid-menu").toggleClass("mid-animate");
+        $(".bottom-menu").toggleClass("bottom-animate");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="top"></div>
+    <!-- Navbar -->
+    <div class="navbar">
+            <img class="logo" src="./images/Logo.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+
+                    <a href="javascript:void(0)" class="icon">
+                        <div class="hamburger">
+                            <div class="menui top-menu"></div>
+                            <div class="menui mid-menu"></div>
+                            <div class="menui bottom-menu"></div>
+                        </div>
+                    </a>
+                </ul>
+            </nav>
+    </div>
+
+    <ul class="overlay-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dyslexia.html">Dyslexia</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="app.html">Our App</a></li>
+    </ul>
+
+    <section class="index-hero">
+        <div class="container grid">
+            <div class="wow fadeInDown">
+                <h1 class="section-title">Born to be <span class="highlight">different.</span></h1>
+                <p class="section-paragraph">See different, think different! Unjumble is a campaign
+                    to raise awareness about Dyslexia and its stigmas.
+                    Though dyslexics see and think differently,
+                    it doesn't make them any less capable.</p>
+                <a href="#campaignanchor"><div class="btn">Read More</div></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-campaign">
+        <div id="campaignanchor"></div>
+        <div class="container grid">
+            <div class="campaigncopy">
+                <h1 class="section-title"><span class="highlight">Unjumble: The Campaign</span></h1>
+                <p class="section-paragraph">Started specially for Dyslexics, Unjumble hopes to "unjumble"
+                    the challenges faced by them in school, or in the workforce.
+                    From providing tips to introducing our very own Unjumbler App,
+                    this campaign covers everything you need to know about Dyslexia.</p>
+            </div>
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/176845224" class="video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-stats">
+        <div class="container grid">
+            <div class="card wow fadeInDown">
+                <img src="./images/index/fact1.png" alt="">
+                <p class="section-paragraph">Dyslexia is the most common learning disability.</p>
+            </div>
+            <div class="card wow fadeInDown">
+                <img src="./images/index/fact2.png" alt="">
+                <p class="section-paragraph">10% of Singaporeans are diagnosed with dyslexia.</p>
+            </div>
+            <div class="card wow fadeInDown">
+                <img src="./images/index/fact3.png" alt="">
+                <p class="section-paragraph">For every class of 20, at least 1 student is dyslexic.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-app">
+        <div class="container grid">
+            <div class="order-1 text-center wow fadeInUp">
+                <img src="./images/app/6sconvertHD.png" alt="">
+            </div>
+            <div class="order-2 mb-5 pb-5">
+                <h1 class="section-title highlight">Unjumbler App</h1>
+                <p class="section-paragraph">Converting words to sounds for all to hear. Introducing Unjumbler, the only application that translates your complications to ease.</p>
+                <div class="btn"><a href="app.html">Read More</a></div>
+            </div>
+        </div>
+    </section>
+    <a href="#" class="back-to-top">↑</a>
+
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container grid grid-3">
+            <div class="footer-copy">
+                <h1>Unjumble</h1>
+                <p>Copyright &copy; Nick Teo 2021.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dyslexia.html">Dyslexia</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="app.html">Our App</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-1x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-1x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-1x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-1x"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
